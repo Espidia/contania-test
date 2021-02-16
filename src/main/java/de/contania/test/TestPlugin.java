@@ -1,5 +1,6 @@
 package de.contania.test;
 
+import de.contania.test.command.TestCommand;
 import de.contania.test.listener.JoinListener;
 import org.bukkit.Material;
 import org.bukkit.configuration.Configuration;
@@ -19,6 +20,8 @@ public class TestPlugin extends JavaPlugin {
 
         ItemStack joinItem = readJoinItem(configuration.getConfigurationSection("joinItem"));
         getServer().getPluginManager().registerEvents(new JoinListener(joinItem), this);
+
+        getCommand("test").setExecutor(new TestCommand(configuration.getString("message")));
     }
 
     private ItemStack readJoinItem(ConfigurationSection section) {
