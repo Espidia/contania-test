@@ -1,0 +1,8 @@
+name: test
+author: Espidia
+version: 1.0.0-SNAPSHOT
+main: de.contania.test.TestPlugin
+
+commands:
+  test:
+    permission: contania.test.command

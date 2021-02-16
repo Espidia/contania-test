@@ -1,0 +1,4 @@
+joinItem:
+  type: 'STONE'
+  amount: 10
+message: '§cHallooooo {0}' # 0 = Player name, 1 = Player health, 2 = Player level
